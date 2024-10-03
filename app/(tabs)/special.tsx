@@ -9,9 +9,9 @@ const special = () => {
   const {container}=styles
   const[text,setText]=useState('')
   return (
-   <SafeAreaView style={container}>
+   <SafeAreaView style={container}><Header pageHeader={'My Meals'}/>
     <SearchBar placeholder={'Search Meals'}/>
-    <Header pageHeader={'My Meals'}/>
+    
     
     <SpecialList/>
    </SafeAreaView>

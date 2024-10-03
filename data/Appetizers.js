@@ -1,80 +1,140 @@
-import bruschetta from '../assets/images/bruschetta.jpg'
-import mushrooms from '../assets/images/mushrooms.jpg'
+import bruschetta from '../assets/images/bruschetta.jpg';
+import mushrooms from '../assets/images/mushrooms.jpg';
 
 export const appetizers = [
-    {   image:bruschetta,
-        "name": "Bruschetta",
-        "description": "Toasted bread topped with a mix of tomatoes, basil, and garlic.",
-        "price": 8.99
+    {   
+        id: 1,
+        image: bruschetta,
+        name: "Bruschetta",
+        calories: 20,
+        description: "Toasted bread topped with a mix of tomatoes, basil, and garlic.",
+        price: 8.99,
+        allergens: 'none',
     },
-    {   image:mushrooms,
-        "name": "Stuffed Mushrooms",
-        "description": "Mushrooms filled with a savory cheese and herb mixture.",
-        "price": 10.49
-    },
-    {
-        "name": "Chicken Wings",
-        "description": "Crispy wings tossed in a tangy barbecue sauce.",
-        "price": 12.99
-    },
-    {
-        "name": "Spring Rolls",
-        "description": "Crispy rolls filled with vegetables and served with a dipping sauce.",
-        "price": 7.49
+    {   
+        id: 2,
+        image: mushrooms,
+        name: "Stuffed Mushrooms",
+        calories: 25,
+        description: "Mushrooms filled with a savory cheese and herb mixture.",
+        price: 10.49,
+        allergens: 'dairy',
     },
     {
-        "name": "Nachos",
-        "description": "Tortilla chips topped with melted cheese, jalapeños, and salsa.",
-        "price": 11.79
+        id: 3,
+        image: '',
+        name: "Chicken Wings",
+        calories: 300,
+        description: "Crispy wings tossed in a tangy barbecue sauce.",
+        price: 12.99,
+        allergens: 'none',
     },
     {
-        "name": "Garlic Bread",
-        "description": "Sliced bread topped with garlic butter and herbs, baked until golden.",
-        "price": 6.99
+        id: 4,
+        image: '',
+        name: "Spring Rolls",
+        calories: 150,
+        description: "Crispy rolls filled with vegetables and served with a dipping sauce.",
+        price: 7.49,
+        allergens: 'gluten',
     },
     {
-        "name": "Caprese Skewers",
-        "description": "Skewered cherry tomatoes, mozzarella balls, and fresh basil, drizzled with balsamic glaze.",
-        "price": 9.29
+        id: 5,
+        image: '',
+        name: "Nachos",
+        calories: 400,
+        description: "Tortilla chips topped with melted cheese, jalapeños, and salsa.",
+        price: 11.79,
+        allergens: 'dairy',
     },
     {
-        "name": "Onion Rings",
-        "description": "Crispy battered onion rings served with a dipping sauce.",
-        "price": 8.49
+        id: 6,
+        image: '',
+        name: "Garlic Bread",
+        calories: 350,
+        description: "Sliced bread topped with garlic butter and herbs, baked until golden.",
+        price: 6.99,
+        allergens: 'gluten, dairy',
     },
     {
-        "name": "Queso Dip",
-        "description": "Creamy cheese dip with a hint of spice, served with tortilla chips.",
-        "price": 9.99
+        id: 7,
+        image: '',
+        name: "Caprese Skewers",
+        calories: 200,
+        description: "Skewered cherry tomatoes, mozzarella balls, and fresh basil, drizzled with balsamic glaze.",
+        price: 9.29,
+        allergens: 'dairy',
     },
     {
-        "name": "Meatballs",
-        "description": "Savory meatballs in a rich marinara sauce.",
-        "price": 11.29
+        id: 8,
+        image: '',
+        name: "Onion Rings",
+        calories: 300,
+        description: "Crispy battered onion rings served with a dipping sauce.",
+        price: 8.49,
+        allergens: 'gluten',
     },
     {
-        "name": "Deviled Eggs",
-        "description": "Halved eggs filled with a creamy, seasoned yolk mixture.",
-        "price": 7.99
+        id: 9,
+        image: '',
+        name: "Queso Dip",
+        calories: 250,
+        description: "Creamy cheese dip with a hint of spice, served with tortilla chips.",
+        price: 9.99,
+        allergens: 'dairy',
     },
     {
-        "name": "Fried Calamari",
-        "description": "Lightly breaded and fried calamari rings served with marinara sauce.",
-        "price": 13.49
+        id: 10,
+        image: '',
+        name: "Meatballs",
+        calories: 320,
+        description: "Savory meatballs in a rich marinara sauce.",
+        price: 11.29,
+        allergens: 'gluten, dairy',
     },
     {
-        "name": "Hummus Platter",
-        "description": "A platter of hummus served with pita bread and fresh vegetables.",
-        "price": 10.79
+        id: 11,
+        image: '',
+        name: "Deviled Eggs",
+        calories: 150,
+        description: "Halved eggs filled with a creamy, seasoned yolk mixture.",
+        price: 7.99,
+        allergens: 'eggs',
     },
     {
-        "name": "Buffalo Cauliflower",
-        "description": "Roasted cauliflower bites tossed in spicy buffalo sauce.",
-        "price": 9.49
+        id: 12,
+        image: '',
+        name: "Fried Calamari",
+        calories: 400,
+        description: "Lightly breaded and fried calamari rings served with marinara sauce.",
+        price: 13.49,
+        allergens: 'seafood, gluten',
     },
     {
-        "name": "Coconut Shrimp",
-        "description": "Shrimp coated in a crispy coconut batter and served with a sweet chili sauce.",
-        "price": 12.29
+        id: 13,
+        image: '',
+        name: "Hummus Platter",
+        calories: 300,
+        description: "A platter of hummus served with pita bread and fresh vegetables.",
+        price: 10.79,
+        allergens: 'gluten',
+    },
+    {
+        id: 14,
+        image: '',
+        name: "Buffalo Cauliflower",
+        calories: 200,
+        description: "Roasted cauliflower bites tossed in spicy buffalo sauce.",
+        price: 9.49,
+        allergens: 'none',
+    },
+    {
+        id: 15,
+        image: '',
+        name: "Coconut Shrimp",
+        calories: 350,
+        description: "Shrimp coated in a crispy coconut batter and served with a sweet chili sauce.",
+        price: 12.29,
+        allergens: 'seafood, gluten',
     }
 ];

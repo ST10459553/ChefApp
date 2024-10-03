@@ -3,14 +3,47 @@ import React, { useState,useEffect, } from 'react'
 import { appetizers } from '@/data/Appetizers'
 import { meals } from '@/data/Meals'
 import { desserts } from '@/data/Desserts'
+import { useRouter } from 'expo-router'
 
 
 
 
 const RoundedButton = () => {
-    const {container,button,textBtn,buttonActive,gridContainer,name,price,image}=styles
+  function CalcAverage(array) {
+    let count = 0;
+    let sum = 0;
+
+    array.forEach((item) => {
+        count++;
+        sum += item.price;
+    });
+
+    const average = count > 0 ? sum / count : 0; 
+    return average;
+}
+
+    const {container,button,textBtn,buttonActive,gridContainer,name,price,image,imgBtn,averagePriceStyle}=styles
     const [active,setActive]=useState('Appetizers')
     const [data, setData] = useState(appetizers);
+    const router=useRouter()
+    const averagePrice=CalcAverage(data)
+    const goToDescription=(item)=>{
+    router.push({
+      pathname: "/description",
+      params: {
+        name: item.name,
+        price: item.price,
+        description: item.description,
+        image: item.image,
+        calories:item.calories,
+        allergens:item.allergens,
+        
+        
+         // Passing individual properties through the {item} parameter 
+      },
+    })
+    }
+    
 
     // useEffect based on when the active state changes will change arrays that will used for the flatlist depending on the active button
     useEffect(() => {
@@ -31,10 +64,14 @@ const RoundedButton = () => {
   // redner function how the items are gonna be rendered
   const renderItem = ({ item }) => (
     <View style={gridContainer}>
-      <Image style={image} source={(item.image)}/>
+      
+      <TouchableOpacity  style={imgBtn}onPress={()=>goToDescription(item)
+      }>
+      <Image style={image} source={item.image}/>
         <Text style={name}>{item.name}</Text>
         {/* <Text style={}>{item.description}</Text> */}
         <Text style={price}>R{item.price.toFixed(2)}</Text>
+        </TouchableOpacity>
     </View>
     )
  
@@ -46,10 +83,11 @@ const RoundedButton = () => {
       <TouchableOpacity style={active==='Meals'? buttonActive:button}><Text style={textBtn} onPress={()=>{setActive('Meals')}}>Meals</Text></TouchableOpacity>
       <TouchableOpacity style={active==='Desserts'? buttonActive:button} onPress={()=>{setActive('Desserts')}}><Text style={textBtn}>Desserts</Text></TouchableOpacity>
     </View>
+    <Text style={averagePriceStyle}>Average Price: R{averagePrice.toFixed(2)}</Text>
     <FlatList 
     data={data}
     renderItem={renderItem}
-    keyExtractor={(item)=>item.name}
+    keyExtractor={(item)=>item.id.toString()}
     numColumns={2}
     
     />
@@ -82,7 +120,7 @@ const styles = StyleSheet.create({
     },
     gridContainer:{
       flex:1,
-      gap:9,
+      gap:0,
       justifyContent:'center',
       alignItems:'center',
       margin:5,
@@ -91,9 +129,21 @@ const styles = StyleSheet.create({
 
     },
     image:{
-      height:250,
-      width:'100%',
+      height:220,
+      width:170,
       objectFit:'cover',
       borderRadius:5,
+    },
+    imgBtn:{
+    flex:1,
+    flexDirection:'column',
+    justifyContent:'center',
+    alignItems:'center',
+    gap:10,
+    },
+    averagePriceStyle:{
+      fontSize:15,
+      margin:10,
+      fontWeight:'bold'
     }
 })

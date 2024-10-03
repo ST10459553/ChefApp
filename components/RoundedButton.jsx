@@ -19,14 +19,24 @@ const RoundedButton = () => {
     });
 
     const average = count > 0 ? sum / count : 0; 
-    return average;
-}
+    return average ;
+} 
+  function CalcTotal(array){
+    let count=0
+    array.forEach((item)=>{
+      count++
+
+    })
+    const total=count
+    return total
+  }
 
     const {container,button,textBtn,buttonActive,gridContainer,name,price,image,imgBtn,averagePriceStyle}=styles
     const [active,setActive]=useState('Appetizers')
     const [data, setData] = useState(appetizers);
     const router=useRouter()
     const averagePrice=CalcAverage(data)
+    const totalItem=CalcTotal(data)
     const goToDescription=(item)=>{
     router.push({
       pathname: "/description",
@@ -83,7 +93,7 @@ const RoundedButton = () => {
       <TouchableOpacity style={active==='Meals'? buttonActive:button}><Text style={textBtn} onPress={()=>{setActive('Meals')}}>Meals</Text></TouchableOpacity>
       <TouchableOpacity style={active==='Desserts'? buttonActive:button} onPress={()=>{setActive('Desserts')}}><Text style={textBtn}>Desserts</Text></TouchableOpacity>
     </View>
-    <Text style={averagePriceStyle}>Average Price: R{averagePrice.toFixed(2)}</Text>
+    <Text style={averagePriceStyle}>Average Price: R{averagePrice.toFixed(2)}       Total Items:{totalItem}</Text>
     <FlatList 
     data={data}
     renderItem={renderItem}

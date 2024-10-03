@@ -98,40 +98,5 @@ export const desserts = [
         price: 8.29,
         allergens: 'gluten, dairy',
     },
-    {
-        id: 12,
-        image: 'chocolateFondue',
-        name: "Chocolate Fondue",
-        calories: 600,
-        description: "Rich chocolate fondue served with an assortment of fruits and marshmallows.",
-        price: 11.99,
-        allergens: 'dairy',
-    },
-    {
-        id: 13,
-        image: 'keyLimePie',
-        name: "Key Lime Pie",
-        calories: 250,
-        description: "Tangy key lime custard in a graham cracker crust, topped with whipped cream.",
-        price: 7.49,
-        allergens: 'gluten, dairy',
-    },
-    {
-        id: 14,
-        image: 'almondCake',
-        name: "Almond Cake",
-        calories: 290,
-        description: "Moist almond cake with a hint of almond extract, served with a dusting of powdered sugar.",
-        price: 8.99,
-        allergens: 'gluten, nuts',
-    },
-    {
-        id: 15,
-        image: 'iceCreamSundae',
-        name: "Ice Cream Sundae",
-        calories: 400,
-        description: "Vanilla ice cream topped with chocolate syrup, nuts, and a cherry.",
-        price: 6.79,
-        allergens: 'gluten, dairy, nuts',
-    }
+    
 ];

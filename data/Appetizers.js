@@ -128,13 +128,5 @@ export const appetizers = [
         price: 9.49,
         allergens: 'none',
     },
-    {
-        id: 15,
-        image: '',
-        name: "Coconut Shrimp",
-        calories: 350,
-        description: "Shrimp coated in a crispy coconut batter and served with a sweet chili sauce.",
-        price: 12.29,
-        allergens: 'seafood, gluten',
-    }
+   
 ];

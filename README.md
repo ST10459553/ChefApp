@@ -58,8 +58,10 @@ Join our community of developers creating universal apps.
    <li> Items are loaded and saved through the Async Storage  </li>
    <li> Created item ID is created by the name+number generated from 1-100 </li>
    <li> Created Items are included in the Average Calculation and Total items </li>
+   <li> Added imagePicker to add select pictures from gallery to created Item </li>
+   
 
 </ul>
 
 <h1>Youtube Link </h1>
-<p> </p>
+<p>https://youtu.be/joq1o5At6ug </p>

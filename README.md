@@ -48,3 +48,18 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+<h1>Change Log</h1>
+<ul>
+   <li> Removed special Screen </li>
+   <li> Added Add Content Button on the header  </li>
+   <li> Added a modal when add content button is clicked </li>
+   <li> Modal contains field for  Name, Price, Picker for category ,Allerges and Calories </li>
+   <li> Items are loaded and saved through the Async Storage  </li>
+   <li> Created item ID is created by the name+number generated from 1-100 </li>
+   <li> Created Items are included in the Average Calculation and Total items </li>
+
+</ul>
+
+<h1>Youtube Link </h1>
+<p> </p>

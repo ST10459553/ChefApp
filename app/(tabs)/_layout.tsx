@@ -21,7 +21,7 @@ export default function RootLayout() {
         <Octicons name="home" size={30} color={focused? '#FFF114':'grey' } />
       )
     }}/>
-    <Tabs.Screen name='special' options={{title:'Special',tabBarIcon:({color,focused})=>(<MaterialCommunityIcons name="chef-hat" color={focused? '#FFF114':'grey'} size={30}/>)}}/>
+    {/* <Tabs.Screen name='special' options={{title:'Special',tabBarIcon:({color,focused})=>(<MaterialCommunityIcons name="chef-hat" color={focused? '#FFF114':'grey'} size={30}/>)}}/> */}
     <Tabs.Screen name='meals' options={{title:'Meals',
       tabBarIcon:({color,focused})=>(<FontAwesome name="user" size={30} color={focused? '#FFF114':'grey'}/>)
     }}/>

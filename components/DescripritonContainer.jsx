@@ -7,7 +7,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const DescripritonContainer = (props) => {
     const {container,nameStyle,descriptionStyle,caloriesStyle,caloriesStyle2,allergenStyle,allergenStyle2,priceStyle,img,namePriceWrapper}= styles
-    const {itemName,itemDescription,itemCalories,itemAllergen,itemPrice}= props
     const {name,price,description,image,calories,allergens,}=useLocalSearchParams()
     const [meals,setMeals]=useState(MyMeals)
     
@@ -22,14 +21,14 @@ const DescripritonContainer = (props) => {
         }
     };
 
-    // Function to save meals only if they don't already exist
+    // Function to save meals only if they don't already exist using  the local search params
     const saveMeals = async () => {
         const newMeal = {
             name,
             image,
-            price,
+            price:parseFloat(price),
             description,
-            calories,
+            calories:parseInt(calories,10),
             allergens,
         };
 

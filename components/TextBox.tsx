@@ -2,10 +2,10 @@ import { StyleSheet, Text, View,TextInput } from 'react-native'
 import React from 'react'
 
 const TextBox = (props:any) => {
-
+  const {onChangeText}=props
   return (
     <View style={styles.container}>
-   <TextInput style={styles.text}placeholder={props.placeholder}/>
+   <TextInput style={styles.text}placeholder={props.placeholder} onChangeText={onChangeText}/>
     </View>
   )
 }
